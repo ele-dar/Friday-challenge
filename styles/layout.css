@@ -1,0 +1,122 @@
+/* NAVIGATION */
+
+#nav {
+	background-color: var(--menu-color);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 100vh;
+	padding: 44px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	transition: width var(--transition-time);
+}
+
+.nav_line {
+	margin: 32px 0 16px;
+	width: 62px;
+	border: 1px solid var(--my-grey);
+	transition: width var(--transition-time);
+}
+
+.nav_list {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.nav_item {
+	display: flex;
+	align-items: center;
+	padding: 16px 30px;
+	position: relative;
+}
+
+.nav_icon {
+	width: 40px;
+	height: 25px;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-right: 10px;
+}
+.nav_item:nth-child(1) .nav_icon {
+	background-image: url('../assets/home_icon.svg');
+}
+.nav_item:nth-child(2) .nav_icon {
+	background-image: url('../assets/calendar_icon.svg');
+}
+.nav_item:nth-child(3) .nav_icon {
+	background-image: url('../assets/FE_icon.svg');
+}
+.nav_item:nth-child(4) .nav_icon {
+	background-image: url('../assets/games_icon.svg');
+}
+
+.nav_text {
+	width: 80px;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.nav_text p {
+	margin-left: -80px;
+	color: var(--my-grey);
+	transition: margin-left var(--transition-time);
+}
+
+.highlighted p {
+	color: var(--main-color);
+}
+.highlighted .nav_icon {
+	filter: brightness(0) saturate(100%) invert(22%) sepia(38%) saturate(3066%) hue-rotate(172deg) brightness(98%)
+		contrast(98%);
+}
+.highlighted_bckg {
+	width: 90px;
+	height: 50px;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	background-color: #fff;
+	z-index: 0;
+	position: absolute;
+	left: 10px;
+	transition: width var(--transition-time);
+}
+
+#nav:hover {
+	width: 206px;
+}
+#nav:hover .nav_line {
+	width: 128px;
+}
+#nav:hover .nav_text p {
+	margin-left: 0px;
+}
+#nav:hover .highlighted_bckg {
+	width: 196px;
+}
+
+/* FOOTER */
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	color: var(--main-color);
+}
+
+.footer_line {
+	width: 346px;
+	border: 0.5px solid var(--main-color);
+}
+
+#footer > p {
+	margin-top: 11px;
+	height: 24px;
+	font-size: 11px;
+}
